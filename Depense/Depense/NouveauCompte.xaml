@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Depense.NouveauCompte">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Nouveau Compte" Style="{StaticResource titre}"/>
+            <Label Text="Adresse Courriel" Style="{StaticResource controle}"/>
+            <Entry x:Name="txtAdresseCourriel" Placeholder="Saisir une adresse courriel" Keyboard="Email"/>
+            <Label Text="Mot de passe" Style="{StaticResource controle}"/>
+            <Entry x:Name="txtMotDePasse" Placeholder="Saisir un mot de passe" IsPassword="True"/>
+            <Label Text="Confirmation de mot de passe" Style="{StaticResource controle}"/>
+            <Entry x:Name="txtConfirmationMotDePasse" Placeholder="Confirmer le mot de passe" IsPassword="True"/>
+            <Button x:Name="btnCreerCompte" Text="Créer le compte" Clicked="btnCreerCompte_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

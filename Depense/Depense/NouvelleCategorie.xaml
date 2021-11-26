@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Depense.NouvelleCategorie">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Nouvelle Categorie" Style="{StaticResource titre}" />
+            <Label Text="Catégorie" Style="{StaticResource controle}"/>
+            <Entry Placeholder="Saisir le nom de la catégorie" x:Name="txtCategorie"/>
+            <Button Text="Enregistrer" x:Name="btnEnregistrer" Clicked="btnEnregistrer_Clicked"/>
+            <Button Text="Supprimer" x:Name="btnSupprimer" Clicked="btnSupprimer_Clicked" Style="{StaticResource lien}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

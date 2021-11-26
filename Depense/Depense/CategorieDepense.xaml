@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Depense.CategorieDepense">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Ajouter" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lstCategories" ItemSelected="lstCategories_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Nom}" Detail="{Binding Pourcentage, StringFormat='Dépense totale de {0:0.00}%'}" />
+                        <!--Ajouter une propriété Detail au TextCell qui affiche le pourcentage de chaque catégorie par rapport au montant totale des dépenses-->
+                        <!--À considérer une méthode pour calculer le pourcentage de chaque catégorie-->
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

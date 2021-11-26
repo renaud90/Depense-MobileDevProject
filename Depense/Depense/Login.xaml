@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Depense.Login">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="baseStyle">
+                <Setter Property="TextColor" Value="Black" />
+            </Style>
+            <Style TargetType="Label" x:Key="titre" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="FontSize" Value="36"/>
+            </Style>
+            <Style TargetType="Label" x:Key="normal" BasedOn="{StaticResource baseStyle}">
+                <Setter Property="FontSize" Value="16"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout Padding="10, 150, 10, 10">
+
+            <Label Text="Dépense"
+                    Style="{StaticResource titre}"
+                   HorizontalOptions="Center"
+                   />
+            <Label Text="Développé par Simon Inc."
+                   HorizontalOptions="Center"
+                   Style="{StaticResource normal}"
+                   Margin="0, 0, 0, 60"/>
+            <Label Text="Adresse courriel"
+                   Style="{StaticResource normal}"
+                   />
+            <Entry Placeholder="Adresse courriel"
+                   x:Name="txtAdresseCourriel"
+                   BackgroundColor="White"
+                   Margin="0, 0, 0, 10"
+                   Keyboard="Email"
+                   Text="test@test.com"/>
+            <Label Text="mot de passe"
+                   Style="{StaticResource normal}"
+                   />
+            <Entry Placeholder="Mot de passe"
+                   x:Name="txtMotDePasse"
+                   BackgroundColor="White"
+                   Margin="0, 0, 0, 10"
+                   IsPassword="True"
+                   Text="test123"/>
+            <Button Text="Se Connecter"
+                    x:Name="btnConnexion"
+                    Clicked="btnConnexion_Clicked"/>
+            <Button Text="Créer nouveau compte"
+                    x:Name="btnCreerCompte"
+                    Style="{StaticResource lien}"
+                    Clicked="btnCreerCompte_Clicked"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

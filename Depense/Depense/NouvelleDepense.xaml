@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Depense.NouvelleDepense">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Ajouter Lieu" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Nouvelle Dépense" Style="{StaticResource titre}" Margin="0, 10"/>
+            <Label Text="Description" Style="{StaticResource controle}"/>
+            <Entry x:Name="txtDescription" Placeholder="Saisir une deescription"/>
+            <Label Text="Montant" Style="{StaticResource controle}"/>
+            <Entry x:Name="txtMontant" Placeholder="Saisir un montant" Keyboard="Numeric"/> <!--N'oubliez pas le clavier :)-->
+            <Label Text="Date" Style="{StaticResource controle}" />
+            <DatePicker x:Name="datePick"/>
+            <Label Text="Catégorie" Style="{StaticResource controle}"/>
+            <Picker x:Name="pickCategorie"/>
+            <Button x:Name="btnEnregistrer" Text="Enregistrer" Clicked="btnEnregistrer_Clicked"/>
+            <Button x:Name="btnSupprimer" Text="Supprimer" Style="{StaticResource lien}" Clicked="btnSupprimer_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
